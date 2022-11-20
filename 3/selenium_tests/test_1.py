@@ -15,7 +15,7 @@ logger.addHandler(ch)
 Należy podać ścieżkę do drivera
 """
 driver = webdriver.Chrome(executable_path=r"D:\programowanie\INNE\chromedriver.exe")
-logger.info('Przechodzę na stronę amazon.pl')
+logger.info('Przechodzę na stronę przypinki.pl')
 driver.get('https://przypinki.pl/')
 cookies = driver.find_element(By.ID, "accept-cookies-checkbox")
 logger.info('Akceptuję ciasteczka')

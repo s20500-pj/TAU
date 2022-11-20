@@ -15,7 +15,7 @@ logger.addHandler(ch)
 Należy podać ścieżkę do drivera
 Kilkukrotne odpalenie testu nie jest możliwe gdyż wikipedia wprowadzi blokadę captcha
 """
-driver = webdriver.Chrome(executable_path=r"D:\programowanie\INNE\chromedriver.exe")
+driver = webdriver.Firefox(executable_path=r"D:\programowanie\INNE\geckodriver.exe")
 logger.info('Przechodzę na stronę wikipedia.pl')
 driver.get('https://pl.wikipedia.org/wiki/Wikipedia:Strona_g%C5%82%C3%B3wna')
 logger.info('Klikam zaloguj się')
