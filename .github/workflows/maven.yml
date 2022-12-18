@@ -29,4 +29,4 @@ jobs:
         distribution: 'temurin'
         cache: maven
     - name: Run tests with Maven
-      run: mvn clean test --file 5/pom.xml
+      run: mvn clean test --file 5/tree-implementation-main/pom.xml
