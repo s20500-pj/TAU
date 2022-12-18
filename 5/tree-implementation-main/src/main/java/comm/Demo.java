@@ -30,6 +30,7 @@ public class Demo {
 
         branch2.add(new Fruit("yellow"));
         branch2.add(new Leaf("yellow"));
+        branch2.add(new Leaf("pink"));
 
         tree.getTreeTrunk().displayColor();
     }
