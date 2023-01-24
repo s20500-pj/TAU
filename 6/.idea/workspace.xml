@@ -4,23 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e044329e-ad88-4b12-875e-b11ce2cc0729" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/obstaclesGame/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/obstaclesGame/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/obstaclesGame/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/obstaclesGame/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/obstaclesGame/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/obstaclesGame/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/obstaclesGame/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/obstaclesGame/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/obstaclesGame/src/main/java/org/obstacles/Game.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/obstaclesGame/src/main/java/org/obstacles/exceptions/InvalidInputException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/obstaclesGame/src/main/java/org/obstacles/exceptions/OutsideMapException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/obstaclesGame/src/main/java/org/obstacles/exceptions/WrongMoveException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/obstaclesGame/src/main/java/org/obstacles/models/Board.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/obstaclesGame/src/main/java/org/obstacles/models/Player.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/obstaclesGame/src/main/java/org/obstacles/models/Position.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/obstaclesGame/src/test/java/org/obstacles/GameTest.java" afterDir="false" />
+    <list default="true" id="e044329e-ad88-4b12-875e-b11ce2cc0729" name="Changes" comment="implemented the game">
+      <change afterPath="$PROJECT_DIR$/obstaclesGame/src/test/java/org/obstacles/models/BoardTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obstaclesGame/src/test/java/org/obstacles/models/PlayerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obstaclesGame/src/main/java/org/obstacles/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/obstaclesGame/src/main/java/org/obstacles/Game.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obstaclesGame/src/main/java/org/obstacles/models/Board.java" beforeDir="false" afterPath="$PROJECT_DIR$/obstaclesGame/src/main/java/org/obstacles/models/Board.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obstaclesGame/src/main/java/org/obstacles/models/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/obstaclesGame/src/main/java/org/obstacles/models/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obstaclesGame/src/main/java/org/obstacles/models/Position.java" beforeDir="false" afterPath="$PROJECT_DIR$/obstaclesGame/src/main/java/org/obstacles/models/Position.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obstaclesGame/target/classes/org/obstacles/Game.class" beforeDir="false" afterPath="$PROJECT_DIR$/obstaclesGame/target/classes/org/obstacles/Game.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obstaclesGame/target/classes/org/obstacles/models/Board.class" beforeDir="false" afterPath="$PROJECT_DIR$/obstaclesGame/target/classes/org/obstacles/models/Board.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obstaclesGame/target/classes/org/obstacles/models/Player.class" beforeDir="false" afterPath="$PROJECT_DIR$/obstaclesGame/target/classes/org/obstacles/models/Player.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obstaclesGame/target/classes/org/obstacles/models/Position.class" beforeDir="false" afterPath="$PROJECT_DIR$/obstaclesGame/target/classes/org/obstacles/models/Position.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obstaclesGame/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/obstaclesGame/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obstaclesGame/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/obstaclesGame/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obstaclesGame/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/obstaclesGame/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,6 +30,7 @@
       <list>
         <option value="Class" />
         <option value="Enum" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
@@ -59,10 +58,107 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
     "extract.method.default.visibility": "private",
     "last_opened_file_path": "D:/programowanie/TAU/6"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="org.obstacles.models" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.Game">
+    <configuration name="Game" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.obstacles.Game" />
+      <module name="obstaclesGame" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.obstacles.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PlayerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="obstaclesGame" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.obstacles.models.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.obstacles.models" />
+      <option name="MAIN_CLASS_NAME" value="org.obstacles.models.PlayerTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PlayerTest.checkWinCondition" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="obstaclesGame" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.obstacles.models.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.obstacles.models" />
+      <option name="MAIN_CLASS_NAME" value="org.obstacles.models.PlayerTest" />
+      <option name="METHOD_NAME" value="checkWinCondition" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PlayerTest.moveUntilFindObstacle" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="obstaclesGame" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.obstacles.models.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.obstacles.models" />
+      <option name="MAIN_CLASS_NAME" value="org.obstacles.models.PlayerTest" />
+      <option name="METHOD_NAME" value="moveUntilFindObstacle" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PlayerTest.moveUpUntilTheEdge" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="obstaclesGame" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.obstacles.models.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.obstacles.models" />
+      <option name="MAIN_CLASS_NAME" value="org.obstacles.models.PlayerTest" />
+      <option name="METHOD_NAME" value="moveUpUntilTheEdge" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Game" />
+        <item itemvalue="JUnit.PlayerTest.checkWinCondition" />
+        <item itemvalue="JUnit.PlayerTest" />
+        <item itemvalue="JUnit.PlayerTest.moveUntilFindObstacle" />
+        <item itemvalue="JUnit.PlayerTest.moveUpUntilTheEdge" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -74,8 +170,24 @@
       <workItem from="1672693935441" duration="56000" />
       <workItem from="1672694003254" duration="2401000" />
       <workItem from="1672775128664" duration="5516000" />
-      <workItem from="1672855080425" duration="6908000" />
+      <workItem from="1672855080425" duration="7068000" />
+      <workItem from="1673000497268" duration="792000" />
+      <workItem from="1673782653993" duration="7039000" />
+      <workItem from="1673814174493" duration="3125000" />
+      <workItem from="1673905781024" duration="3884000" />
+      <workItem from="1673987581349" duration="5728000" />
+      <workItem from="1674498958633" duration="1796000" />
+      <workItem from="1674512069139" duration="2787000" />
+      <workItem from="1674593010370" duration="2595000" />
     </task>
+    <task id="LOCAL-00001" summary="implemented the game">
+      <created>1672863546081</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1672863546081</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -91,5 +203,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="implemented the game" />
+    <option name="LAST_COMMIT_MESSAGE" value="implemented the game" />
   </component>
 </project>

@@ -1,1 +1,7 @@
+D:\programowanie\TAU\6\obstaclesGame\src\main\java\org\obstacles\models\Board.java
+D:\programowanie\TAU\6\obstaclesGame\src\main\java\org\obstacles\models\Position.java
 D:\programowanie\TAU\6\obstaclesGame\src\main\java\org\obstacles\Game.java
+D:\programowanie\TAU\6\obstaclesGame\src\main\java\org\obstacles\models\Player.java
+D:\programowanie\TAU\6\obstaclesGame\src\main\java\org\obstacles\exceptions\OutsideMapException.java
+D:\programowanie\TAU\6\obstaclesGame\src\main\java\org\obstacles\exceptions\InvalidInputException.java
+D:\programowanie\TAU\6\obstaclesGame\src\main\java\org\obstacles\exceptions\WrongMoveException.java

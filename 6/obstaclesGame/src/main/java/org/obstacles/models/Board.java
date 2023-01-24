@@ -19,26 +19,30 @@ public class Board {
     private String[][] board;
     @Getter
     private int boardSize;
+    @Getter
     private Position playerPosition;
+    @Getter
+    private Position finishPosition;
 
     public Board(int boardSize) {
         this.boardSize = boardSize;
-        initBoard();
         this.playerPosition = new Position();
+        this.finishPosition = new Position();
     }
 
-    private void initBoard() {
+    public void initBoard() {
         board = new String[boardSize][boardSize];
         for (int i = 0; i < boardSize; i++) {
             Arrays.fill(board[i], UNDERSCORE);
         }
-        setBoardObjects();
     }
 
-    private void setBoardObjects() {
-        board[0][0] = X;
+    public void setBoardObjects() {
+        Random rand = new Random();
         fillObstacles();
-        board[boardSize - 1][boardSize - 1] = F;
+        setFinishPosition(rand.nextInt(boardSize), boardSize - 1);
+        setPlayerPosition(rand.nextInt(boardSize), 0);
+        clearFieldsNextToFinishAndStart();
     }
 
     private void fillObstacles() {
@@ -47,10 +51,6 @@ public class Board {
                 board[i][j] = getRandomObstacle();
             }
         }
-        board[0][1]=UNDERSCORE;
-        board[1][0]=UNDERSCORE;
-        board[boardSize-2][boardSize-1]=UNDERSCORE;
-        board[boardSize-1][boardSize-2]=UNDERSCORE;
     }
 
     private String getRandomObstacle() {
@@ -76,14 +76,19 @@ public class Board {
         return board[row][col];
     }
 
-    public Position getPlayerPosition() {
-        return this.playerPosition;
+    public void setPlayerPosition(int row, int col) {
+        board[playerPosition.getRow()][playerPosition.getCol()] = UNDERSCORE;
+        playerPosition.setPosition(row, col);
+        board[row][col] = X;
     }
 
-    public void setPlayerPosition(int row, int col) {
-        this.board[playerPosition.getRow()][playerPosition.getCol()] = UNDERSCORE;
-        this.playerPosition.setRow(row);
-        this.playerPosition.setCol(col);
-        this.board[row][col] = X;
+    private void setFinishPosition(int row, int col) {
+        finishPosition.setPosition(row, col);
+        board[row][col] = F;
+    }
+
+    private void clearFieldsNextToFinishAndStart() {
+        board[playerPosition.getRow()][playerPosition.getCol() + 1] = UNDERSCORE;
+        board[finishPosition.getRow()][finishPosition.getCol() - 1] = UNDERSCORE;
     }
 }

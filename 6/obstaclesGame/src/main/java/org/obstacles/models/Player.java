@@ -11,24 +11,30 @@ import java.io.InputStreamReader;
 import java.util.List;
 
 public class Player {
-    BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+    private final BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
     @Getter
     private final String name;
     @Getter
-    private final Board board;
-    private boolean finish = false;
+    private Board board;
+    private Position finishPosition;
     private final List<String> obstacleList = List.of("M", "H", "L");
+    private boolean finish = false;
     private int numberOfMoves = 0;
 
-    public Player(String name, int boardSize) {
+    public Player(String name) {
         this.name = name;
+    }
+
+    public void initTheGame(int boardSize) {
         this.board = new Board(boardSize);
+        this.board.initBoard();
+        this.board.setBoardObjects();
+        this.finishPosition = this.board.getFinishPosition();
     }
 
     public void move(char direction) {
-        Position position = this.board.getPlayerPosition();
-        int currentRow = position.getRow();
-        int currentCol = position.getCol();
+        int currentRow = this.board.getPlayerPosition().getRow();
+        int currentCol = this.board.getPlayerPosition().getCol();
         switch (Character.toLowerCase(direction)) {
             case 'w' -> {
                 if (currentRow - 1 < 0) {
@@ -66,24 +72,23 @@ public class Player {
                 }
                 currentCol++;
             }
-            default -> {
-                throw new InvalidInputException("Invalid input, try again");
-            }
+            default -> throw new InvalidInputException("Invalid input, try again");
         }
-        this.board.setPlayerPosition(currentRow, currentCol);
+        board.setPlayerPosition(currentRow, currentCol);
         numberOfMoves++;
-        if (currentRow == this.board.getBoardSize() - 1 && currentCol == this.board.getBoardSize() - 1) {
+        if (currentRow == this.finishPosition.getRow() && currentCol == this.finishPosition.getCol()) {
             System.out.println("YOU WON");
             System.out.println("Number of moves " + numberOfMoves);
-            this.finish = true;
+            finish = true;
         }
     }
 
-    public void play() throws IOException {
+    public void play(int boardSize) throws IOException {
+        initTheGame(boardSize);
         String readline;
         char key = 0;
         while (!this.finish) {
-            this.board.printBoard();
+            board.printBoard();
             readline = reader.readLine();
             if (readline.length() > 0) {
                 key = readline.charAt(0);
